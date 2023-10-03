@@ -4,7 +4,7 @@ function App() {
   return (
 
     <div className="App" >
-      <h1 className="heading">Simple Calculator using React</h1>
+      <h1 className="heading">Calculator</h1>
       <Calculator></Calculator>
     </div>
   );

@@ -1,24 +1,39 @@
-import React,{useState} from 'react'
+import React,{useRef, useState} from 'react'
 import Screen from './Screen'
 
 function Keyboard() {
     const [inputText, setInputText] = useState('')
-    const reset = () => {
-        setInputText("")
-    }
+    const [result, setResult] = useState(0)
+    const [errorMessage, setErrorMessage] = useState('')
+
     const clickHandler = e => {
         setInputText(inputText.concat(e.target.name))
-        console.log(inputText)
     }
     const calculateHandler = () => {
-        console.log(eval("2+3"))
+        try {
+            setResult(eval(inputText))
+            reset()
+        }
+        catch (e) {
+            setErrorMessage("Something went wrong, Click X")
+            reset()
+        }
+        
+    }
+    const reset = () => {
+        setInputText('')
+    }
+    const backSpace = () => {
+        setInputText(inputText.slice(0, -1))
+        setErrorMessage("")
     }
   return (
       <div>
-          <Screen inputText={inputText}></Screen>
+          <h1>{errorMessage}</h1>
+          <Screen inputText={inputText} result={result}></Screen>
           <button onClick={clickHandler} name ="%">%</button>
           <button onClick={reset}>Reset</button>
-          <button onClick={clickHandler} name ="X">X</button>
+          <button onClick={backSpace} name ="X">X</button>
           <button onClick={clickHandler} name ="/">/</button>
           <br />
           <button onClick={clickHandler} name ="7">7</button>

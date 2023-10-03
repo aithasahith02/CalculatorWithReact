@@ -4,20 +4,49 @@
     align-items: center;
 }
 
+button:hover{
+    background-color: rgb(216, 211, 211);
+}
+.equalsButton {
+    background-color: rgb(109, 102, 102);
+}
+.operatorsButton:hover {
+    background-color: orange;
+
+}
+.equalsButton:hover {
+    background-color:green;
+}
 button {
-    margin: auto;
     width: 100px;
     height: 100px;
+    color :black;
+    font-size: 35px;
+    font-family: 'sans-serif';
+    background-color: whitesmoke;
+    border: 15%;
+    border-color: black;
 }
 
 .inputTextBox {
-    align-items: center;
     width: 394px;
     height: 80px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    border-color: black;
+    border-width: 2px;
 }
 
 .resultTextBox {
     align-items: center;
     width: 394px;
     height: 100px;
+    font-size: 70px;
+    font-family: 'Times New Roman', Times, serif;
+    border-color: black;
+    border-width: 2px;
+}
+.Error{
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

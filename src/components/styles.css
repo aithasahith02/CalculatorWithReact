@@ -1,0 +1,23 @@
+.buttonsContainer {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    align-items: center;
+}
+
+button {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+
+.inputTextBox {
+    align-items: center;
+    width: 394px;
+    height: 80px;
+}
+
+.resultTextBox {
+    align-items: center;
+    width: 394px;
+    height: 100px;
+}
